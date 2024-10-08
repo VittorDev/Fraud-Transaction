@@ -1,9 +1,23 @@
 # Fraud-Transaction
-Este estudo tem como objetivo elaborar um modelo de machine learning capaz de prever transações fraudulentas, e entender quais os fatores contribuem para conseguir identificar uma transação fraudelenta.
+# Introdução ao problema
+Em muitos setores, como bancos, e-commerces e seguros, a fraude é um problema sério e pode causar grandes prejuízos financeiros, impactando negativamente a confiança dos clientes desses setores. O objetivo de um sistema de detecção de fraudes é identificar transações ou atividades fraudulentas com a maior precisão possível, minimizando transações que possam ser verdadeiras mas não são, e transações legítimas que são incorretamente classificadas como fraudulentas.
 
-O dataset utilizado para esse estudo será o "fraud transactions dataset" que reune dados de operações fraudelentas e não fraudelentas.
+Um dos desafios na detecção de fraudes é que os dados geralmente são altamente desbalanceados, com a maioria das transações sendo legítimas e apenas uma pequena porcentagem sendo fraudulentas. Além disso, os fraudadores estão constantemente adaptando suas táticas, o que torna o problema dinâmico e em constante evolução.
 
-Esse dataset foi retirado do Kaggle, e pode ser acessado através deste link: https://www.kaggle.com/search?q=fraud+transaction+in%3Adatasets.
+Neste contexto, temos dois conjuntos de dados: um de treino (fraudTrain.csv) e outro de teste (fraudTest.csv). O objetivo é desenvolver um modelo preditivo capaz de identificar transações suspeitas com base em um conjunto de características fornecidas, utilizando o conjunto de treino para construir o modelo e o conjunto de testes para avaliar seu desempenho.
+
+# Objetivo
+O objetivo principal deste projeto é desenvolver e avaliar modelos preditivos capazes de identificar transações fraudulentas de maneira eficaz e eficiente. Especificamente, buscamos:
+
+1 - Identificar e selecionar as características mais relevantes que ajudam a diferenciar transações legítimas de fraudulentas.
+
+2- Explorar e comparar diferentes técnicas de aprendizado de máquina para a detecção de fraudes.
+
+3 - Desenvolver estratégias para lidar com o problema do desbalanceamento de classes no dataset.
+
+4- Minimizar a taxa de falsos positivos e falsos negativos, otimizando assim a eficiência do modelo na detecção de fraudes.
+
+Esses objetivos servirão como base para criar um sistema de detecção de fraudes que possa ser implementado em cenários reais para prevenir perdas financeiras e proteger a integridade das transações.
 
 # 1 - Importação dos Dados
 
@@ -32,5 +46,17 @@ Para um melhor entendimento do que cada uma das categórias significa no context
 21. merch_long:longitude of the merchant (Dados de geolocalização do estabelecimento alvo da transação)
 22. is_fraud: Whether the transaction is fraud(1) or not(0) (Varíavel alvo, onde o 0 é não fraude e 1 é operações fraudelentas)
 
-    O Data set é composto por 22 colunas e 1.852.394 linhas de dados.
+O Data set é composto por 22 colunas e 1.852.394 linhas de dados.
 
+# Preperação dos Dados
+
+# Análise Exploratória
+ANÁLISES UNIVARIADAS
+
+Iremos começar a análise analisando cada varíavel, para conhecermos mais profundamente as observações do nosso dataset e visando responder as seguintes perguntas:
+
+1 - Quantidade de observações de fraudes e não fraudes
+
+2 - Gênero que mais possuí recorrência de fraudes
+
+3 - Idade em que mais ocorre fraudes
